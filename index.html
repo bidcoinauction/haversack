@@ -3,24 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quarterly Review</title>
+    <title>Quarterly Review - Data Variations</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #000000;
         }
         .slide-container {
             height: 100vh;
             scroll-snap-type: y mandatory;
             overflow-y: scroll;
-            /* Custom scrollbar for a cleaner look */
-            scrollbar-width: thin;
-            scrollbar-color: #4F46E5 #111827;
         }
         .slide {
             height: 100vh;
@@ -30,7 +26,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 2rem 4rem;
+            padding: 3rem;
             position: relative;
             overflow: hidden;
         }
@@ -38,390 +34,224 @@
             position: absolute;
             top: 2rem;
             left: 2rem;
-            display: flex;
-            align-items: center;
             z-index: 10;
         }
         .haversack-logo img {
             width: 150px;
             height: auto;
         }
-        .gradient-text {
-            background: linear-gradient(90deg, #6366F1, #EC4899);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .slide-title {
+            font-weight: 700;
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+            margin-bottom: 0.5rem;
         }
-        .slide-number {
-            position: absolute;
-            bottom: 2rem;
-            right: 2rem;
-            color: #4B5563;
-            font-size: 1rem;
-            font-weight: 600;
+        .slide-subtitle {
+            font-weight: 500;
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+            margin-bottom: 2rem;
         }
-        /* Specific styles for new slides */
-        .split-slide {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: stretch;
-            gap: 2rem;
-            padding: 6rem 4rem;
-        }
-        .split-slide > div {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+        .positive-change { color: #4ade80; }
+        .negative-change { color: #f87171; }
     </style>
 </head>
 <body>
 
     <div class="slide-container">
-        <!-- Slide 1: Minimalist Title (Original) -->
-        <div id="slide1" class="slide bg-black text-white">
-            <div class="haversack-logo">
-                <img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo">
-            </div>
-            <div class="text-center">
-                <h1 class="text-6xl md:text-8xl font-bold mb-4">Quarter 1 Review</h1>
-                <p class="text-2xl md:text-3xl text-gray-400">Transportation & Logistics</p>
-            </div>
-            <div class="slide-number">01</div>
-        </div>
 
-        <!-- Slide 2: Data Table Focus (Original) -->
-        <div id="slide2" class="slide bg-gray-900 text-white">
-            <div class="haversack-logo">
-                <img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo">
-            </div>
-            <div class="w-full max-w-5xl mx-auto">
-                <h2 class="text-4xl font-bold mb-2">Q1 FTL Freight Spend</h2>
-                <p class="text-lg text-gray-400 mb-6">Total Load Count: <span class="font-semibold text-white">847</span> <span class="text-green-400 text-sm">(+8.87%)</span></p>
-                <div class="overflow-x-auto rounded-lg shadow-lg bg-gray-800">
+        <!-- Variation 1: Clean & Minimal (Light Mode) -->
+        <div id="v1" class="slide bg-white text-gray-800">
+            <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-full max-w-5xl text-center">
+                <h1 class="slide-title">Quarter 1 FTL Freight Spend by Provider</h1>
+                <p class="slide-subtitle text-gray-500">Total Load Count: <span class="font-semibold text-gray-700">847</span> <span class="positive-change">(+8.87%)</span></p>
+                <div class="w-full overflow-hidden rounded-lg border border-gray-200">
                     <table class="w-full text-left">
-                        <thead class="bg-gray-700/50">
+                        <thead class="bg-gray-50">
                             <tr>
-                                <th class="p-4 font-semibold">Provider</th>
-                                <th class="p-4 font-semibold">Spend</th>
-                                <th class="p-4 font-semibold">Load Count</th>
-                                <th class="p-4 font-semibold">Spend Change vs Q4</th>
+                                <th class="p-4 font-semibold text-sm">PROVIDER</th>
+                                <th class="p-4 font-semibold text-sm text-right">SPEND</th>
+                                <th class="p-4 font-semibold text-sm text-right">LOAD COUNT</th>
+                                <th class="p-4 font-semibold text-sm text-right">SPEND CHANGE</th>
                             </tr>
                         </thead>
-                        <tbody class="bg-gray-800">
-                            <tr class="border-b border-gray-700"><td class="p-4">Haversack Truckload</td><td class="p-4">$2,205,686.86</td><td class="p-4">741</td><td class="p-4 text-green-400">4.04%</td></tr>
-                            <tr class="border-b border-gray-700"><td class="p-4">Landstar</td><td class="p-4">$152,765</td><td class="p-4">32</td><td class="p-4 text-red-400">-14.94%</td></tr>
-                            <tr class="border-b border-gray-700"><td class="p-4">Seko Logistics</td><td class="p-4">$97,392.64</td><td class="p-4">34</td><td class="p-4 text-green-400">100%</td></tr>
-                            <tr class="border-b border-gray-700"><td class="p-4">Tech Freight</td><td class="p-4">$65,132.74</td><td class="p-4">33</td><td class="p-4 text-green-400">63.36%</td></tr>
-                            <tr class="border-b border-gray-700"><td class="p-4">Piedmont Moving</td><td class="p-4">$17,200</td><td class="p-4">2</td><td class="p-4 text-red-400">-82.03%</td></tr>
-                            <tr><td class="p-4">Other</td><td class="p-4">$2,633.71</td><td class="p-4">5</td><td class="p-4 text-green-400">100%</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="text-xs text-gray-500 mt-2">*All percentages are compared to the previous quarter.</p>
-            </div>
-            <div class="slide-number">02</div>
-        </div>
-
-        <!-- Slide 3: Visual KPI Cards (Original) -->
-        <div id="slide3" class="slide" style="background: linear-gradient(135deg, #000000 0%, #1a1a2e 100%);">
-            <div class="haversack-logo">
-                <img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo">
-            </div>
-            <div class="text-center w-full max-w-5xl">
-                <h2 class="text-4xl font-bold text-white mb-8">Quarterly Highlights</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 text-white"><h3 class="text-xl font-semibold text-gray-300 mb-2">Total Spend</h3><p class="text-5xl font-bold gradient-text">$2.5M+</p><p class="text-gray-400 mt-2">Across all providers</p></div>
-                    <div class="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 text-white"><h3 class="text-xl font-semibold text-gray-300 mb-2">Total Loads</h3><p class="text-5xl font-bold gradient-text">847</p><p class="text-green-400 mt-2 font-semibold">+8.87% from Q4</p></div>
-                    <div class="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 text-white"><h3 class="text-xl font-semibold text-gray-300 mb-2">Top Provider</h3><p class="text-4xl font-bold gradient-text">Haversack</p><p class="text-gray-400 mt-2">741 Loads</p></div>
-                </div>
-            </div>
-            <div class="slide-number">03</div>
-        </div>
-
-        <!-- Slide 4: Graph Left / Overview Right (Version 1) -->
-        <div id="slide4" class="slide split-slide bg-black text-white">
-            <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
-            <!-- Left Column: Chart -->
-            <div class="pr-8">
-                <h2 class="text-3xl font-bold mb-4">Provider Spend Distribution</h2>
-                <div class="bg-gray-900 p-6 rounded-xl h-full">
-                    <canvas id="spendChart"></canvas>
-                </div>
-            </div>
-            <!-- Right Column: Overview -->
-            <div class="pl-8 border-l-2 border-gray-700">
-                <h2 class="text-3xl font-bold mb-6 gradient-text">Q1 Overview</h2>
-                <div class="space-y-4 text-gray-300">
-                    <div><h3 class="font-semibold text-white text-lg">Transportation Spend</h3><p>Breakdown by Service Level & Provider</p></div>
-                    <div><h3 class="font-semibold text-white text-lg">Service</h3><p>Requested vs. Expected, Delays Analysis</p></div>
-                    <div><h3 class="font-semibold text-white text-lg">Quarterly Action Plan</h3><p>Security, GPS Tracking, New Provider Portal</p></div>
-                    <div><h3 class="font-semibold text-white text-lg">Q2 Current Items</h3><p>Open Items, Projects, Opportunities</p></div>
-                </div>
-            </div>
-            <div class="slide-number">04</div>
-        </div>
-
-        <!-- Slide 5: Graph Left / Overview Right (Version 2) -->
-        <div id="slide5" class="slide split-slide text-white" style="background: radial-gradient(circle at top left, #1e1b4b, #0c0a1d);">
-            <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
-            <!-- Left Column: Table -->
-            <div class="pr-4">
-                 <h2 class="text-3xl font-bold mb-4">FTL Freight Spend</h2>
-                 <div class="overflow-hidden rounded-lg shadow-2xl border border-violet-500/30">
-                    <table class="w-full text-left text-sm">
-                        <thead class="bg-white/5"><tr><th class="p-3">Provider</th><th class="p-3">Spend</th><th class="p-3">Loads</th></tr></thead>
-                        <tbody class="bg-black/20">
-                            <tr class="border-b border-white/10"><td>Haversack</td><td>$2.2M</td><td>741</td></tr>
-                            <tr class="border-b border-white/10"><td>Landstar</td><td>$152k</td><td>32</td></tr>
-                            <tr class="border-b border-white/10"><td>Seko</td><td>$97k</td><td>34</td></tr>
-                            <tr class="border-b border-white/10"><td>Tech Freight</td><td>$65k</td><td>33</td></tr>
-                            <tr><td>Others</td><td>$19k</td><td>9</td></tr>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr><td class="p-4 font-medium">Haversack Truckload</td><td class="p-4 text-right">$2,205,686.86</td><td class="p-4 text-right">741</td><td class="p-4 text-right positive-change">4.04%</td></tr>
+                            <tr><td class="p-4 font-medium">Landstar</td><td class="p-4 text-right">$152,765.00</td><td class="p-4 text-right">32</td><td class="p-4 text-right negative-change">-14.94%</td></tr>
+                            <tr><td class="p-4 font-medium">Seko Logistics</td><td class="p-4 text-right">$97,392.64</td><td class="p-4 text-right">34</td><td class="p-4 text-right positive-change">100%</td></tr>
+                            <tr><td class="p-4 font-medium">Tech Freight</td><td class="p-4 text-right">$65,132.74</td><td class="p-4 text-right">33</td><td class="p-4 text-right positive-change">63.36%</td></tr>
+                            <tr><td class="p-4 font-medium">Piedmont Moving</td><td class="p-4 text-right">$17,200.00</td><td class="p-4 text-right">2</td><td class="p-4 text-right negative-change">-82.03%</td></tr>
+                            <tr><td class="p-4 font-medium">Other Providers</td><td class="p-4 text-right">$2,633.71</td><td class="p-4 text-right">5</td><td class="p-4 text-right positive-change">100%</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-            <!-- Right Column: Overview -->
-            <div class="pl-4">
-                <h2 class="text-3xl font-bold mb-6">Key Focus Areas</h2>
-                <div class="space-y-5">
-                    <div class="bg-white/5 p-4 rounded-lg border-l-4 border-indigo-400"><h3 class="font-bold">SAP (TMS) Initiative</h3><p class="text-sm text-gray-400">Current Development & Future Launches</p></div>
-                    <div class="bg-white/5 p-4 rounded-lg border-l-4 border-pink-400"><h3 class="font-bold">Service & Claims</h3><p class="text-sm text-gray-400">Analysis of Delays and Claim Reports</p></div>
-                    <div class="bg-white/5 p-4 rounded-lg border-l-4 border-teal-400"><h3 class="font-bold">Security Enhancements</h3><p class="text-sm text-gray-400">GPS Tracking and New Provider Portal</p></div>
-                </div>
-            </div>
-            <div class="slide-number">05</div>
-        </div>
-        
-        <!-- Slide 6: Overview Left / Graph Right (Version 1) -->
-        <div id="slide6" class="slide split-slide bg-gray-900 text-white">
-            <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
-            <!-- Left Column: Overview -->
-            <div class="pr-8">
-                <h2 class="text-4xl font-bold mb-6">Agenda & Topics</h2>
-                <ul class="list-none space-y-3 text-lg">
-                    <li class="border-b border-gray-700 pb-2">Transportation Spend Analysis</li>
-                    <li class="border-b border-gray-700 pb-2">Service Level Review</li>
-                    <li class="border-b border-gray-700 pb-2">Claims & Delays Deep Dive</li>
-                    <li class="border-b border-gray-700 pb-2">Q1 Action Plan Results</li>
-                    <li class="gradient-text font-semibold">Q2 Projects & Opportunities</li>
-                </ul>
-            </div>
-            <!-- Right Column: Chart -->
-            <div class="pl-8 border-l-2 border-gray-700 flex flex-col items-center justify-center">
-                 <h2 class="text-3xl font-bold mb-4">Load Count by Provider</h2>
-                 <div class="relative w-full h-80">
-                    <canvas id="loadChart"></canvas>
-                 </div>
-            </div>
-            <div class="slide-number">06</div>
         </div>
 
-        <!-- Slide 7: Overview Left / Graph Right (Version 2) -->
-        <div id="slide7" class="slide split-slide text-white bg-black">
-             <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_bottom_right,_rgba(236,72,153,0.15),_transparent_30%)]"></div>
+        <!-- Variation 2: High-Contrast Dark Mode -->
+        <div id="v2" class="slide bg-black text-white">
             <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
-            <!-- Left Column: Overview -->
-            <div class="z-10">
-                <h2 class="text-4xl font-bold mb-6">Q1 Summary</h2>
-                <div class="space-y-6">
-                    <div class="flex items-start gap-4"><div class="mt-1 w-8 h-8 flex-shrink-0 rounded-full bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center font-bold">1</div><div><h3 class="font-semibold text-xl">Spend & Provider Breakdown</h3><p class="text-gray-400">Detailed analysis of financial distribution.</p></div></div>
-                    <div class="flex items-start gap-4"><div class="mt-1 w-8 h-8 flex-shrink-0 rounded-full bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center font-bold">2</div><div><h3 class="font-semibold text-xl">Service Performance</h3><p class="text-gray-400">Evaluating expected vs. requested delivery times.</p></div></div>
-                    <div class="flex items-start gap-4"><div class="mt-1 w-8 h-8 flex-shrink-0 rounded-full bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center font-bold">3</div><div><h3 class="font-semibold text-xl">Future Initiatives</h3><p class="text-gray-400">Updates on SAP (TMS) and the new provider portal.</p></div></div>
+            <div class="w-full max-w-5xl">
+                <div class="text-left mb-8">
+                    <h1 class="slide-title">Quarter 1 FTL Freight Spend by Provider</h1>
+                    <p class="slide-subtitle text-gray-400">Total Load Count: 847 <span class="positive-change">(+8.87%)</span></p>
                 </div>
-            </div>
-            <!-- Right Column: Table -->
-            <div class="z-10 bg-gray-500/10 backdrop-blur-sm border border-white/10 p-6 rounded-xl">
-                 <h2 class="text-2xl font-bold mb-4 text-center">Top 5 Providers by Spend</h2>
-                 <table class="w-full text-left">
-                    <thead><tr><th class="p-2">Provider</th><th class="p-2">Spend</th></tr></thead>
-                    <tbody>
-                        <tr><td class="p-2 font-medium">Haversack Truckload</td><td class="p-2">$2,205,686</td></tr>
-                        <tr><td class="p-2 font-medium">Landstar</td><td class="p-2">$152,765</td></tr>
-                        <tr><td class="p-2 font-medium">Seko Logistics</td><td class="p-2">$97,392</td></tr>
-                        <tr><td class="p-2 font-medium">Tech Freight</td><td class="p-2">$65,132</td></tr>
-                        <tr><td class="p-2 font-medium">Piedmont Moving</td><td class="p-2">$17,200</td></tr>
+                <table class="w-full text-left">
+                    <thead>
+                        <tr class="border-b-2 border-gray-700">
+                            <th class="pb-3 pt-1 font-semibold">Provider</th>
+                            <th class="pb-3 pt-1 font-semibold text-right">Spend</th>
+                            <th class="pb-3 pt-1 font-semibold text-right">Load Count</th>
+                            <th class="pb-3 pt-1 font-semibold text-right">Spend Change</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-800">
+                        <tr class="font-medium"><td class="py-4">Haversack Truckload</td><td class="py-4 text-right">$2,205,686.86</td><td class="py-4 text-right">741</td><td class="py-4 text-right positive-change">4.04%</td></tr>
+                        <tr class="font-medium"><td class="py-4">Landstar</td><td class="py-4 text-right">$152,765.00</td><td class="py-4 text-right">32</td><td class="py-4 text-right negative-change">-14.94%</td></tr>
+                        <tr class="font-medium"><td class="py-4">Seko Logistics</td><td class="py-4 text-right">$97,392.64</td><td class="py-4 text-right">34</td><td class="py-4 text-right positive-change">100%</td></tr>
+                        <tr class="font-medium"><td class="py-4">Tech Freight</td><td class="py-4 text-right">$65,132.74</td><td class="py-4 text-right">33</td><td class="py-4 text-right positive-change">63.36%</td></tr>
+                        <tr class="font-medium"><td class="py-4">Piedmont Moving</td><td class="py-4 text-right">$17,200.00</td><td class="py-4 text-right">2</td><td class="py-4 text-right negative-change">-82.03%</td></tr>
+                        <tr class="font-medium"><td class="py-4">Other Providers</td><td class="py-4 text-right">$2,633.71</td><td class="py-4 text-right">5</td><td class="py-4 text-right positive-change">100%</td></tr>
                     </tbody>
-                 </table>
+                </table>
             </div>
-            <div class="slide-number">07</div>
         </div>
 
-        <!-- Slide 8: Three-Column Layout -->
-        <div id="slide8" class="slide bg-black text-white">
+        <!-- Variation 3: Card-Based Layout -->
+        <div id="v3" class="slide bg-gray-100 text-gray-800">
             <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
             <div class="w-full max-w-6xl text-center">
-                <h2 class="text-4xl font-bold mb-10">Quarter 2 Current Items</h2>
-                <div class="grid md:grid-cols-3 gap-8 text-left">
-                    <div class="bg-gray-900 p-6 rounded-lg border-t-4 border-indigo-500">
-                        <h3 class="text-xl font-bold mb-4">Open Items</h3>
-                        <ul class="space-y-2 text-gray-400"><li>Item A</li><li>Item B</li><li>Item C</li></ul>
-                    </div>
-                    <div class="bg-gray-900 p-6 rounded-lg border-t-4 border-pink-500">
-                        <h3 class="text-xl font-bold mb-4">Projects</h3>
-                        <ul class="space-y-2 text-gray-400"><li>Project X</li><li>Project Y</li><li>Project Z</li></ul>
-                    </div>
-                    <div class="bg-gray-900 p-6 rounded-lg border-t-4 border-teal-500">
-                        <h3 class="text-xl font-bold mb-4">Areas of Opportunity</h3>
-                        <ul class="space-y-2 text-gray-400"><li>Opportunity 1</li><li>Opportunity 2</li><li>Opportunity 3</li></ul>
-                    </div>
+                <h1 class="slide-title">Quarter 1 FTL Freight Spend by Provider</h1>
+                <p class="slide-subtitle text-gray-500">Total Load Count: <span class="font-semibold text-gray-700">847</span> <span class="positive-change">(+8.87%)</span></p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-left">
+                    <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm"><h3 class="font-bold text-lg">Haversack Truckload</h3><p class="text-2xl font-semibold mt-1">$2,205,686.86</p><div class="flex justify-between text-sm mt-2 text-gray-500"><p>741 Loads</p><p class="font-semibold positive-change">4.04%</p></div></div>
+                    <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm"><h3 class="font-bold text-lg">Landstar</h3><p class="text-2xl font-semibold mt-1">$152,765.00</p><div class="flex justify-between text-sm mt-2 text-gray-500"><p>32 Loads</p><p class="font-semibold negative-change">-14.94%</p></div></div>
+                    <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm"><h3 class="font-bold text-lg">Seko Logistics</h3><p class="text-2xl font-semibold mt-1">$97,392.64</p><div class="flex justify-between text-sm mt-2 text-gray-500"><p>34 Loads</p><p class="font-semibold positive-change">100%</p></div></div>
+                    <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm"><h3 class="font-bold text-lg">Tech Freight</h3><p class="text-2xl font-semibold mt-1">$65,132.74</p><div class="flex justify-between text-sm mt-2 text-gray-500"><p>33 Loads</p><p class="font-semibold positive-change">63.36%</p></div></div>
+                    <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm"><h3 class="font-bold text-lg">Piedmont Moving</h3><p class="text-2xl font-semibold mt-1">$17,200.00</p><div class="flex justify-between text-sm mt-2 text-gray-500"><p>2 Loads</p><p class="font-semibold negative-change">-82.03%</p></div></div>
+                    <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm"><h3 class="font-bold text-lg">Other Providers</h3><p class="text-2xl font-semibold mt-1">$2,633.71</p><div class="flex justify-between text-sm mt-2 text-gray-500"><p>5 Loads</p><p class="font-semibold positive-change">100%</p></div></div>
                 </div>
             </div>
-            <div class="slide-number">08</div>
         </div>
 
-        <!-- Slide 9: Action Plan Checklist -->
-        <div id="slide9" class="slide text-white" style="background: linear-gradient(180deg, #111827 0%, #000000 100%);">
+        <!-- Variation 4: Gradient Accent Dark Mode -->
+        <div id="v4" class="slide bg-gray-900 text-white">
             <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
-            <div class="w-full max-w-3xl">
-                <h2 class="text-4xl font-bold text-center mb-10">Quarterly Action Plan</h2>
-                <div class="space-y-6">
-                    <div class="bg-gray-800/50 p-5 rounded-lg flex items-center gap-5 border border-gray-700">
-                        <div class="text-green-400"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
-                        <div><h3 class="text-xl font-semibold">Security</h3><p class="text-gray-400">Enhanced protocols implemented.</p></div>
-                        <div class="ml-auto text-sm font-semibold text-green-400">COMPLETED</div>
-                    </div>
-                    <div class="bg-gray-800/50 p-5 rounded-lg flex items-center gap-5 border border-gray-700">
-                        <div class="text-yellow-400"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
-                        <div><h3 class="text-xl font-semibold">GPS Tracking</h3><p class="text-gray-400">Integration with new carriers ongoing.</p></div>
-                        <div class="ml-auto text-sm font-semibold text-yellow-400">IN PROGRESS</div>
-                    </div>
-                    <div class="bg-gray-800/50 p-5 rounded-lg flex items-center gap-5 border border-gray-700">
-                        <div class="text-blue-400"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 4h5m-5 4h5"></path></svg></div>
-                        <div><h3 class="text-xl font-semibold">New Provider Portal</h3><p class="text-gray-400">Scheduled for Q3 launch.</p></div>
-                        <div class="ml-auto text-sm font-semibold text-blue-400">PLANNED</div>
-                    </div>
+            <div class="w-full max-w-5xl text-center">
+                <h1 class="slide-title bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">Quarter 1 FTL Freight Spend</h1>
+                <p class="slide-subtitle text-gray-400">Total Load Count: 847 <span class="positive-change">(+8.87%)</span></p>
+                <div class="bg-black/20 p-2 rounded-xl">
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr>
+                                <th class="p-4 font-semibold text-gray-400">Provider</th>
+                                <th class="p-4 font-semibold text-gray-400 text-right">Spend</th>
+                                <th class="p-4 font-semibold text-gray-400 text-right">Load Count</th>
+                                <th class="p-4 font-semibold text-gray-400 text-right">Change</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-t border-gray-800"><td class="p-4 font-semibold">Haversack Truckload</td><td class="p-4 text-right">$2,205,686.86</td><td class="p-4 text-right">741</td><td class="p-4 text-right positive-change">4.04%</td></tr>
+                            <tr class="border-t border-gray-800"><td class="p-4 font-semibold">Landstar</td><td class="p-4 text-right">$152,765.00</td><td class="p-4 text-right">32</td><td class="p-4 text-right negative-change">-14.94%</td></tr>
+                            <tr class="border-t border-gray-800"><td class="p-4 font-semibold">Seko Logistics</td><td class="p-4 text-right">$97,392.64</td><td class="p-4 text-right">34</td><td class="p-4 text-right positive-change">100%</td></tr>
+                            <tr class="border-t border-gray-800"><td class="p-4 font-semibold">Tech Freight</td><td class="p-4 text-right">$65,132.74</td><td class="p-4 text-right">33</td><td class="p-4 text-right positive-change">63.36%</td></tr>
+                            <tr class="border-t border-gray-800"><td class="p-4 font-semibold">Piedmont Moving</td><td class="p-4 text-right">$17,200.00</td><td class="p-4 text-right">2</td><td class="p-4 text-right negative-change">-82.03%</td></tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            <div class="slide-number">09</div>
         </div>
 
-        <!-- ADDED Slide 10: Detailed Agenda Layout -->
-        <div id="slide10" class="slide bg-black text-white">
+        <!-- Variation 5: Chart & Table Combo -->
+        <div id="v5" class="slide bg-black text-white">
             <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
-            <div class="w-full max-w-4xl">
-                <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Detailed Agenda</h2>
-                <div class="space-y-8">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
-                        <h3 class="md:col-span-1 text-2xl font-semibold text-gray-300">Spend & Service</h3>
-                        <div class="md:col-span-2 space-y-3 text-gray-400 border-l-2 border-indigo-500 pl-4">
-                            <p><span class="font-semibold text-white">Transportation Spend:</span> Breakdown by Service Level & Provider</p>
-                            <p><span class="font-semibold text-white">Service Metrics:</span> Requested vs. Expected, Delays Analysis, Claims</p>
+            <div class="w-full max-w-6xl">
+                <div class="text-center mb-8">
+                    <h1 class="slide-title">Quarter 1 FTL Freight Spend by Provider</h1>
+                    <p class="slide-subtitle text-gray-400">Total Load Count: 847 <span class="positive-change">(+8.87%)</span></p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                    <div class="lg:col-span-2">
+                        <div class="h-96 bg-gray-900 p-4 rounded-xl">
+                             <canvas id="spendChart"></canvas>
                         </div>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
-                        <h3 class="md:col-span-1 text-2xl font-semibold text-gray-300">Actions & Items</h3>
-                        <div class="md:col-span-2 space-y-3 text-gray-400 border-l-2 border-pink-500 pl-4">
-                             <p><span class="font-semibold text-white">Quarterly Action Plan:</span> Security, GPS Tracking, New Provider Portal</p>
-                             <p><span class="font-semibold text-white">Q2 Current Items:</span> Open Items, Projects, Areas of Opportunity</p>
-                        </div>
-                    </div>
-                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
-                        <h3 class="md:col-span-1 text-2xl font-semibold text-gray-300">Technology</h3>
-                        <div class="md:col-span-2 space-y-3 text-gray-400 border-l-2 border-teal-500 pl-4">
-                             <p><span class="font-semibold text-white">SAP (TMS):</span> Current Development & Future Launches</p>
-                        </div>
+                    <div class="lg:col-span-3">
+                        <table class="w-full text-left text-sm">
+                            <thead class="text-gray-400">
+                                <tr class="border-b border-gray-700">
+                                    <th class="pb-2">Provider</th>
+                                    <th class="pb-2 text-right">Spend</th>
+                                    <th class="pb-2 text-right">Loads</th>
+                                    <th class="pb-2 text-right">Change</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-800">
+                                <tr class="font-medium"><td class="py-3">Haversack Truckload</td><td class="py-3 text-right">$2.21M</td><td class="py-3 text-right">741</td><td class="py-3 text-right positive-change">+4.04%</td></tr>
+                                <tr class="font-medium"><td class="py-3">Landstar</td><td class="py-3 text-right">$152.8k</td><td class="py-3 text-right">32</td><td class="py-3 text-right negative-change">-14.94%</td></tr>
+                                <tr class="font-medium"><td class="py-3">Seko Logistics</td><td class="py-3 text-right">$97.4k</td><td class="py-3 text-right">34</td><td class="py-3 text-right positive-change">+100%</td></tr>
+                                <tr class="font-medium"><td class="py-3">Tech Freight</td><td class="py-3 text-right">$65.1k</td><td class="py-3 text-right">33</td><td class="py-3 text-right positive-change">+63.36%</td></tr>
+                                <tr class="font-medium"><td class="py-3">Piedmont Moving</td><td class="py-3 text-right">$17.2k</td><td class="py-3 text-right">2</td><td class="py-3 text-right negative-change">-82.03%</td></tr>
+                                <tr class="font-medium"><td class="py-3">Others</td><td class="py-3 text-right">$2.6k</td><td class="py-3 text-right">5</td><td class="py-3 text-right positive-change">+100%</td></tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-            <div class="slide-number">10</div>
-        </div>
-
-        <!-- ADDED Slide 11: Icon-Based Overview -->
-        <div id="slide11" class="slide text-white" style="background: radial-gradient(circle at 50% 50%, #1F2937, #000000);">
-            <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
-            <div class="w-full max-w-6xl text-center">
-                <h2 class="text-4xl font-bold mb-12">Key Topics at a Glance</h2>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-                    <div class="flex flex-col items-center space-y-3 p-4 bg-white/5 rounded-lg">
-                        <svg class="w-10 h-10 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                        <h3 class="font-semibold">Spend</h3>
-                    </div>
-                    <div class="flex flex-col items-center space-y-3 p-4 bg-white/5 rounded-lg">
-                        <svg class="w-10 h-10 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
-                        <h3 class="font-semibold">Service</h3>
-                    </div>
-                    <div class="flex flex-col items-center space-y-3 p-4 bg-white/5 rounded-lg">
-                        <svg class="w-10 h-10 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
-                        <h3 class="font-semibold">Action Plan</h3>
-                    </div>
-                     <div class="flex flex-col items-center space-y-3 p-4 bg-white/5 rounded-lg">
-                        <svg class="w-10 h-10 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.24a2 2 0 00-1.806.547a2 2 0 00-.547 1.806l.477 2.387a6 6 0 00.517 3.86l.158.318a6 6 0 00.517 3.86l2.387.477a2 2 0 001.806-.547a2 2 0 00.547-1.806l-.477-2.387a6 6 0 00-.517-3.86l-.158-.318a6 6 0 00-.517-3.86l-2.387-.477a2 2 0 00-1.806.547a2 2 0 00-.547 1.806l.477 2.387a6 6 0 00.517 3.86l.158.318a6 6 0 00.517 3.86l2.387.477a2 2 0 001.806-.547a2 2 0 00.547-1.806l-.477-2.387a6 6 0 00-.517-3.86l-.158-.318a6 6 0 00-.517-3.86zM12 6.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"></path></svg>
-                        <h3 class="font-semibold">Q2 Items</h3>
-                    </div>
-                     <div class="flex flex-col items-center space-y-3 p-4 bg-white/5 rounded-lg">
-                        <svg class="w-10 h-10 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-                        <h3 class="font-semibold">SAP (TMS)</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="slide-number">11</div>
         </div>
 
     </div>
 
     <script>
-        // Data for charts
-        const providerData = {
-            labels: ['Haversack', 'Landstar', 'Seko', 'Tech Freight', 'Piedmont', 'Other'],
-            spends: [2205687, 152765, 97393, 65133, 17200, 2634],
-            loads: [741, 32, 34, 33, 2, 5]
+        const spendData = {
+            labels: ['Haversack', 'Landstar', 'Seko', 'Tech', 'Piedmont', 'Others'],
+            spends: [2205687, 152765, 97393, 65133, 17200, 2634]
         };
 
-        // Chart.js configurations
-        const chartOptions = {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: { legend: { display: false } },
-            scales: {
-                y: { ticks: { color: '#9CA3AF' }, grid: { color: '#374151' } },
-                x: { ticks: { color: '#9CA3AF' }, grid: { color: '#374151' } }
-            }
-        };
-        
-        // Render Spend Chart (Slide 4)
         const spendCtx = document.getElementById('spendChart')?.getContext('2d');
         if (spendCtx) {
             new Chart(spendCtx, {
                 type: 'bar',
                 data: {
-                    labels: providerData.labels,
+                    labels: spendData.labels,
                     datasets: [{
-                        label: 'Spend',
-                        data: providerData.spends,
-                        backgroundColor: 'rgba(99, 102, 241, 0.6)',
-                        borderColor: 'rgba(99, 102, 241, 1)',
+                        label: 'Spend in USD',
+                        data: spendData.spends,
+                        backgroundColor: '#4B5563',
+                        borderColor: '#9CA3AF',
                         borderWidth: 1
                     }]
                 },
-                options: chartOptions
-            });
-        }
-
-        // Render Load Chart (Slide 6)
-        const loadCtx = document.getElementById('loadChart')?.getContext('2d');
-        if (loadCtx) {
-            new Chart(loadCtx, {
-                type: 'doughnut',
-                data: {
-                    labels: providerData.labels,
-                    datasets: [{
-                        label: 'Load Count',
-                        data: providerData.loads,
-                        backgroundColor: ['#4F46E5', '#EC4899', '#10B981', '#F59E0B', '#3B82F6', '#6B7280'],
-                        borderColor: '#1F2937',
-                        borderWidth: 2
-                    }]
-                },
                 options: {
+                    indexAxis: 'y',
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
-                        legend: { position: 'right', labels: { color: '#D1D5DB' } }
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.x !== null) {
+                                        label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(context.parsed.x);
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: { ticks: { color: '#D1D5DB' }, grid: { color: 'rgba(255,255,255,0.1)' } },
+                        x: { ticks: { color: '#D1D5DB' }, grid: { display: false } }
                     }
                 }
             });
         }
     </script>
+
 </body>
 </html>
