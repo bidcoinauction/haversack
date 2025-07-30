@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quarterly Review - Data Variations</title>
+    <title>Modern Geometric Slide Templates</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
+            background-color: #f3f4f6;
         }
         .slide-container {
             height: 100vh;
@@ -26,232 +26,474 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 3rem;
+            padding: 0;
             position: relative;
             overflow: hidden;
         }
         .haversack-logo {
             position: absolute;
-            top: 2rem;
-            left: 2rem;
-            z-index: 10;
+            top: 2.5rem;
+            left: 2.5rem;
+            z-index: 20;
         }
         .haversack-logo img {
-            width: 150px;
+            width: 140px;
             height: auto;
         }
-        .slide-title {
-            font-weight: 700;
-            font-size: 2.25rem;
-            line-height: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        .slide-subtitle {
+        .slide-footer {
+            position: absolute;
+            bottom: 2.5rem;
+            right: 2.5rem;
+            font-size: 0.875rem;
             font-weight: 500;
-            font-size: 1.125rem;
-            line-height: 1.75rem;
-            margin-bottom: 2rem;
+            z-index: 20;
         }
-        .positive-change { color: #4ade80; }
-        .negative-change { color: #f87171; }
+        .light-bg { background-color: #ffffff; }
+        .dark-bg { background-color: #111827; }
+        .light-text { color: #f9fafb; }
+        .dark-text { color: #1f2937; }
+        .subtle-text { color: #6b7280; }
+        .subtle-text-dark { color: #9ca3af; }
+        .gradient-accent { background: linear-gradient(90deg, #4f46e5, #a855f7); }
     </style>
 </head>
 <body>
 
     <div class="slide-container">
 
-        <!-- Variation 1: Clean & Minimal (Light Mode) -->
-        <div id="v1" class="slide bg-white text-gray-800">
+        <!-- 1. Geometric Title -->
+        <div id="t1" class="slide light-bg dark-text">
             <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
-            <div class="w-full max-w-5xl text-center">
-                <h1 class="slide-title">Quarter 1 FTL Freight Spend by Provider</h1>
-                <p class="slide-subtitle text-gray-500">Total Load Count: <span class="font-semibold text-gray-700">847</span> <span class="positive-change">(+8.87%)</span></p>
-                <div class="w-full overflow-hidden rounded-lg border border-gray-200">
-                    <table class="w-full text-left">
-                        <thead class="bg-gray-50">
-                            <tr>
-                                <th class="p-4 font-semibold text-sm">PROVIDER</th>
-                                <th class="p-4 font-semibold text-sm text-right">SPEND</th>
-                                <th class="p-4 font-semibold text-sm text-right">LOAD COUNT</th>
-                                <th class="p-4 font-semibold text-sm text-right">SPEND CHANGE</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-200">
-                            <tr><td class="p-4 font-medium">Haversack Truckload</td><td class="p-4 text-right">$2,205,686.86</td><td class="p-4 text-right">741</td><td class="p-4 text-right positive-change">4.04%</td></tr>
-                            <tr><td class="p-4 font-medium">Landstar</td><td class="p-4 text-right">$152,765.00</td><td class="p-4 text-right">32</td><td class="p-4 text-right negative-change">-14.94%</td></tr>
-                            <tr><td class="p-4 font-medium">Seko Logistics</td><td class="p-4 text-right">$97,392.64</td><td class="p-4 text-right">34</td><td class="p-4 text-right positive-change">100%</td></tr>
-                            <tr><td class="p-4 font-medium">Tech Freight</td><td class="p-4 text-right">$65,132.74</td><td class="p-4 text-right">33</td><td class="p-4 text-right positive-change">63.36%</td></tr>
-                            <tr><td class="p-4 font-medium">Piedmont Moving</td><td class="p-4 text-right">$17,200.00</td><td class="p-4 text-right">2</td><td class="p-4 text-right negative-change">-82.03%</td></tr>
-                            <tr><td class="p-4 font-medium">Other Providers</td><td class="p-4 text-right">$2,633.71</td><td class="p-4 text-right">5</td><td class="p-4 text-right positive-change">100%</td></tr>
+            <div class="w-full h-full flex">
+                <div class="w-3/5 p-16 flex flex-col justify-center">
+                    <p class="text-lg font-semibold text-indigo-600">[Report Type]</p>
+                    <h1 class="text-6xl font-extrabold mt-2">[Quarterly Business Review]</h1>
+                    <p class="text-xl subtle-text mt-4">[Quarter X, 202X]</p>
+                </div>
+                <div class="w-2/5 bg-gray-100 flex items-center justify-center text-gray-300">[Image Area]</div>
+            </div>
+            <div class="slide-footer subtle-text">1</div>
+        </div>
+
+        <!-- 2. Dark Section Break -->
+        <div id="t2" class="slide dark-bg light-text">
+            <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-full max-w-5xl p-16">
+                <p class="text-2xl font-medium subtle-text-dark">[01]</p>
+                <h2 class="text-6xl font-bold mt-2">[Section Title]</h2>
+                <div class="h-1.5 w-24 gradient-accent mt-6"></div>
+            </div>
+            <div class="slide-footer subtle-text-dark">2</div>
+        </div>
+
+        <!-- 3. Agenda with Numbered Blocks -->
+        <div id="t3" class="slide light-bg dark-text">
+            <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-full max-w-5xl p-16">
+                <h2 class="text-4xl font-bold mb-12">[Agenda]</h2>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-6"><div class="w-16 h-16 flex-shrink-0 bg-gray-800 light-text flex items-center justify-center text-2xl font-bold rounded-lg">01</div><p class="text-2xl font-medium">[Topic One]</p></div>
+                    <div class="flex items-center gap-6"><div class="w-16 h-16 flex-shrink-0 bg-gray-800 light-text flex items-center justify-center text-2xl font-bold rounded-lg">02</div><p class="text-2xl font-medium">[Topic Two]</p></div>
+                    <div class="flex items-center gap-6"><div class="w-16 h-16 flex-shrink-0 bg-gray-200 dark-text flex items-center justify-center text-2xl font-bold rounded-lg">03</div><p class="text-2xl font-medium">[Topic Three]</p></div>
+                </div>
+            </div>
+            <div class="slide-footer subtle-text">3</div>
+        </div>
+
+        <!-- 4. KPI Blocks -->
+        <div id="t4" class="slide light-bg dark-text">
+            <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-full max-w-6xl p-16">
+                 <h2 class="text-4xl font-bold mb-10">[Financial Highlights]</h2>
+                 <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-gray-100 p-8 rounded-lg"><p class="font-medium subtle-text">[Metric A]</p><p class="text-5xl font-bold mt-1">[Value]</p></div>
+                    <div class="bg-gray-100 p-8 rounded-lg"><p class="font-medium subtle-text">[Metric B]</p><p class="text-5xl font-bold mt-1">[Value]</p></div>
+                    <div class="bg-indigo-600 text-white p-8 rounded-lg col-span-2"><p class="font-medium opacity-75">[Primary Metric]</p><p class="text-5xl font-bold mt-1">[Value]</p></div>
+                 </div>
+            </div>
+            <div class="slide-footer subtle-text">4</div>
+        </div>
+
+        <!-- 5. Split Content Dark -->
+        <div id="t5" class="slide dark-bg light-text p-0 flex-row">
+            <div class="haversack-logo p-10"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-1/3 h-full p-10 flex flex-col justify-center">
+                <h2 class="text-4xl font-bold">[Topic Title]</h2>
+                <p class="subtle-text-dark mt-4">[Brief summary or introduction to the content on the right.]</p>
+            </div>
+            <div class="w-2/3 h-full bg-gray-800 p-10 flex flex-col justify-center">
+                <div class="h-full w-full flex items-center justify-center subtle-text-dark">[Chart or Table Area]</div>
+            </div>
+            <div class="slide-footer subtle-text-dark p-10">5</div>
+        </div>
+
+        <!-- 6. Overlapping Blocks with Image -->
+        <div id="t6" class="slide light-bg dark-text">
+            <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-full max-w-6xl h-[500px] relative">
+                <div class="absolute top-0 right-0 w-3/5 h-full bg-gray-200 rounded-lg text-gray-400 flex items-center justify-center">[Image Area]</div>
+                <div class="absolute bottom-8 left-8 w-1/2 h-3/5 bg-white border border-gray-200 shadow-xl rounded-lg p-8">
+                    <h3 class="text-2xl font-bold">[Content Title]</h3>
+                    <p class="subtle-text mt-2">[Key points or analysis related to the image.]</p>
+                </div>
+            </div>
+            <div class="slide-footer subtle-text">6</div>
+        </div>
+        
+        <!-- 7. Numbered List with Lines -->
+        <div id="t7" class="slide light-bg dark-text">
+            <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-full max-w-5xl p-16">
+                <h2 class="text-4xl font-bold mb-12">[Key Initiatives]</h2>
+                <div class="space-y-8">
+                    <div class="flex gap-6 border-b border-gray-200 pb-8"><p class="text-4xl font-bold text-indigo-600">01</p><div><h3 class="text-xl font-semibold">[Initiative One]</h3><p class="subtle-text">[Description]</p></div></div>
+                    <div class="flex gap-6 border-b border-gray-200 pb-8"><p class="text-4xl font-bold text-indigo-600">02</p><div><h3 class="text-xl font-semibold">[Initiative Two]</h3><p class="subtle-text">[Description]</p></div></div>
+                    <div class="flex gap-6"><p class="text-4xl font-bold text-indigo-600">03</p><div><h3 class="text-xl font-semibold">[Initiative Three]</h3><p class="subtle-text">[Description]</p></div></div>
+                </div>
+            </div>
+            <div class="slide-footer subtle-text">7</div>
+        </div>
+
+        <!-- 8. Three Column Focus -->
+        <div id="t8" class="slide light-bg dark-text">
+            <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-full max-w-6xl p-16">
+                 <h2 class="text-4xl font-bold text-center mb-12">[Action Plan Overview]</h2>
+                 <div class="grid grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-lg"><h3 class="font-bold text-lg mb-2">[Action 1]</h3><p class="subtle-text text-sm">[Description]</p></div>
+                    <div class="bg-gray-50 p-6 rounded-lg"><h3 class="font-bold text-lg mb-2">[Action 2]</h3><p class="subtle-text text-sm">[Description]</p></div>
+                    <div class="bg-gray-50 p-6 rounded-lg"><h3 class="font-bold text-lg mb-2">[Action 3]</h3><p class="subtle-text text-sm">[Description]</p></div>
+                 </div>
+            </div>
+            <div class="slide-footer subtle-text">8</div>
+        </div>
+
+        <!-- 9. Chart with Sidebar Stats -->
+        <div id="t9" class="slide dark-bg light-text">
+            <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-full max-w-6xl p-16 grid grid-cols-3 gap-12">
+                <div class="col-span-1">
+                    <h3 class="text-2xl font-bold">[Data Analysis]</h3>
+                    <div class="space-y-6 mt-6">
+                        <div><p class="font-medium subtle-text-dark">[Metric A]</p><p class="text-3xl font-bold">[Value]</p></div>
+                        <div><p class="font-medium subtle-text-dark">[Metric B]</p><p class="text-3xl font-bold">[Value]</p></div>
+                    </div>
+                </div>
+                <div class="col-span-2 h-96 bg-gray-800 rounded-lg flex items-center justify-center subtle-text-dark">[Chart Area]</div>
+            </div>
+            <div class="slide-footer subtle-text-dark">9</div>
+        </div>
+
+        <!-- 10. Minimalist Quote -->
+        <div id="t10" class="slide light-bg dark-text">
+            <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-full max-w-4xl p-16 text-center">
+                <div class="w-16 h-1 bg-indigo-500 mx-auto mb-6"></div>
+                <p class="text-3xl font-medium leading-relaxed">"[Key takeaway or summary statement.]"</p>
+            </div>
+            <div class="slide-footer subtle-text">10</div>
+        </div>
+
+        <!-- 11. Image and Text Side-by-Side -->
+        <div id="t11" class="slide light-bg dark-text p-0 flex-row">
+            <div class="haversack-logo p-10"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-1/2 h-full bg-gray-100 flex items-center justify-center text-gray-300">[Image Area]</div>
+            <div class="w-1/2 h-full p-16 flex flex-col justify-center">
+                <h2 class="text-4xl font-bold">[Topic Title]</h2>
+                <p class="subtle-text mt-4">[Detailed description or analysis.]</p>
+            </div>
+            <div class="slide-footer subtle-text p-10">11</div>
+        </div>
+
+        <!-- 12. Four Content Blocks -->
+        <div id="t12" class="slide light-bg dark-text">
+            <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-full max-w-6xl p-16">
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-gray-50 p-8 rounded-lg"><h3 class="font-semibold text-lg">[Point 1]</h3><p class="subtle-text text-sm mt-1">[Description]</p></div>
+                    <div class="bg-gray-50 p-8 rounded-lg"><h3 class="font-semibold text-lg">[Point 2]</h3><p class="subtle-text text-sm mt-1">[Description]</p></div>
+                    <div class="bg-gray-50 p-8 rounded-lg"><h3 class="font-semibold text-lg">[Point 3]</h3><p class="subtle-text text-sm mt-1">[Description]</p></div>
+                    <div class="bg-gray-50 p-8 rounded-lg"><h3 class="font-semibold text-lg">[Point 4]</h3><p class="subtle-text text-sm mt-1">[Description]</p></div>
+                </div>
+            </div>
+            <div class="slide-footer subtle-text">12</div>
+        </div>
+
+        <!-- 13. Title with Gradient Bar -->
+        <div id="t13" class="slide dark-bg light-text">
+            <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-full max-w-5xl p-16">
+                <h2 class="text-6xl font-bold">[Slide Title]</h2>
+                <div class="h-4 w-full gradient-accent mt-6"></div>
+            </div>
+            <div class="slide-footer subtle-text-dark">13</div>
+        </div>
+
+        <!-- 14. Content with Accent Border -->
+        <div id="t14" class="slide light-bg dark-text">
+            <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-full max-w-5xl p-12 border-l-8 border-indigo-500">
+                <h2 class="text-4xl font-bold">[Topic Title]</h2>
+                <p class="subtle-text mt-4">[Detailed description or analysis. The accent border helps this slide stand out.]</p>
+            </div>
+            <div class="slide-footer subtle-text">14</div>
+        </div>
+
+        <!-- 15. Thank You with Contact -->
+        <div id="t15" class="slide dark-bg light-text p-0 flex-row">
+            <div class="haversack-logo p-10"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-1/2 h-full p-10 flex flex-col justify-center">
+                <h2 class="text-6xl font-bold">Thank You.</h2>
+            </div>
+            <div class="w-1/2 h-full bg-gray-800 p-10 flex flex-col justify-center">
+                <h3 class="text-2xl font-semibold">[Presenter Name]</h3>
+                <p class="subtle-text-dark mt-1">[Presenter Title]</p>
+                <p class="mt-4">[email@example.com]</p>
+            </div>
+            <div class="slide-footer subtle-text-dark p-10">15</div>
+        </div>
+        
+        <!-- 16. Data Table (Light) -->
+        <div id="t16" class="slide light-bg dark-text">
+            <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-full max-w-6xl p-16">
+                <h2 class="text-4xl font-bold mb-8">[Data Table Title]</h2>
+                <div class="overflow-hidden border border-gray-200 rounded-lg">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50"><tr class="text-left text-sm font-semibold subtle-text uppercase"><th class="px-6 py-4">[Header 1]</th><th class="px-6 py-4">[Header 2]</th><th class="px-6 py-4">[Header 3]</th></tr></thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr><td class="px-6 py-4">[Data]</td><td class="px-6 py-4">[Data]</td><td class="px-6 py-4">[Data]</td></tr>
+                            <tr><td class="px-6 py-4">[Data]</td><td class="px-6 py-4">[Data]</td><td class="px-6 py-4">[Data]</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
+            <div class="slide-footer subtle-text">16</div>
         </div>
 
-        <!-- Variation 2: High-Contrast Dark Mode -->
-        <div id="v2" class="slide bg-black text-white">
+        <!-- 17. Roadmap with Status -->
+        <div id="t17" class="slide light-bg dark-text">
             <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
-            <div class="w-full max-w-5xl">
-                <div class="text-left mb-8">
-                    <h1 class="slide-title">Quarter 1 FTL Freight Spend by Provider</h1>
-                    <p class="slide-subtitle text-gray-400">Total Load Count: 847 <span class="positive-change">(+8.87%)</span></p>
+            <div class="w-full max-w-6xl p-16">
+                <h2 class="text-4xl font-bold mb-12">[Project Roadmap]</h2>
+                <div class="grid grid-cols-4 gap-6">
+                    <div class="border-t-4 border-green-500 pt-4"><h3 class="font-semibold">[Phase 1]</h3><p class="text-sm subtle-text">[Complete]</p></div>
+                    <div class="border-t-4 border-green-500 pt-4"><h3 class="font-semibold">[Phase 2]</h3><p class="text-sm subtle-text">[Complete]</p></div>
+                    <div class="border-t-4 border-indigo-500 pt-4"><h3 class="font-semibold">[Phase 3]</h3><p class="text-sm subtle-text">[In Progress]</p></div>
+                    <div class="border-t-4 border-gray-300 pt-4"><h3 class="font-semibold">[Phase 4]</h3><p class="text-sm subtle-text">[Planned]</p></div>
                 </div>
-                <table class="w-full text-left">
-                    <thead>
-                        <tr class="border-b-2 border-gray-700">
-                            <th class="pb-3 pt-1 font-semibold">Provider</th>
-                            <th class="pb-3 pt-1 font-semibold text-right">Spend</th>
-                            <th class="pb-3 pt-1 font-semibold text-right">Load Count</th>
-                            <th class="pb-3 pt-1 font-semibold text-right">Spend Change</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-800">
-                        <tr class="font-medium"><td class="py-4">Haversack Truckload</td><td class="py-4 text-right">$2,205,686.86</td><td class="py-4 text-right">741</td><td class="py-4 text-right positive-change">4.04%</td></tr>
-                        <tr class="font-medium"><td class="py-4">Landstar</td><td class="py-4 text-right">$152,765.00</td><td class="py-4 text-right">32</td><td class="py-4 text-right negative-change">-14.94%</td></tr>
-                        <tr class="font-medium"><td class="py-4">Seko Logistics</td><td class="py-4 text-right">$97,392.64</td><td class="py-4 text-right">34</td><td class="py-4 text-right positive-change">100%</td></tr>
-                        <tr class="font-medium"><td class="py-4">Tech Freight</td><td class="py-4 text-right">$65,132.74</td><td class="py-4 text-right">33</td><td class="py-4 text-right positive-change">63.36%</td></tr>
-                        <tr class="font-medium"><td class="py-4">Piedmont Moving</td><td class="py-4 text-right">$17,200.00</td><td class="py-4 text-right">2</td><td class="py-4 text-right negative-change">-82.03%</td></tr>
-                        <tr class="font-medium"><td class="py-4">Other Providers</td><td class="py-4 text-right">$2,633.71</td><td class="py-4 text-right">5</td><td class="py-4 text-right positive-change">100%</td></tr>
-                    </tbody>
-                </table>
             </div>
+            <div class="slide-footer subtle-text">17</div>
         </div>
 
-        <!-- Variation 3: Card-Based Layout -->
-        <div id="v3" class="slide bg-gray-100 text-gray-800">
+        <!-- 18. Split KPI Blocks -->
+        <div id="t18" class="slide dark-bg light-text p-0 flex-row">
+            <div class="haversack-logo p-10"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-1/2 h-full p-10 flex flex-col justify-center"><p class="subtle-text-dark">[Metric A]</p><p class="text-7xl font-bold">[Value]</p></div>
+            <div class="w-1/2 h-full bg-gray-800 p-10 flex flex-col justify-center"><p class="subtle-text-dark">[Metric B]</p><p class="text-7xl font-bold">[Value]</p></div>
+            <div class="slide-footer subtle-text-dark p-10">18</div>
+        </div>
+        
+        <!-- 19. Three Key Stats -->
+        <div id="t19" class="slide light-bg dark-text">
             <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
-            <div class="w-full max-w-6xl text-center">
-                <h1 class="slide-title">Quarter 1 FTL Freight Spend by Provider</h1>
-                <p class="slide-subtitle text-gray-500">Total Load Count: <span class="font-semibold text-gray-700">847</span> <span class="positive-change">(+8.87%)</span></p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-left">
-                    <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm"><h3 class="font-bold text-lg">Haversack Truckload</h3><p class="text-2xl font-semibold mt-1">$2,205,686.86</p><div class="flex justify-between text-sm mt-2 text-gray-500"><p>741 Loads</p><p class="font-semibold positive-change">4.04%</p></div></div>
-                    <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm"><h3 class="font-bold text-lg">Landstar</h3><p class="text-2xl font-semibold mt-1">$152,765.00</p><div class="flex justify-between text-sm mt-2 text-gray-500"><p>32 Loads</p><p class="font-semibold negative-change">-14.94%</p></div></div>
-                    <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm"><h3 class="font-bold text-lg">Seko Logistics</h3><p class="text-2xl font-semibold mt-1">$97,392.64</p><div class="flex justify-between text-sm mt-2 text-gray-500"><p>34 Loads</p><p class="font-semibold positive-change">100%</p></div></div>
-                    <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm"><h3 class="font-bold text-lg">Tech Freight</h3><p class="text-2xl font-semibold mt-1">$65,132.74</p><div class="flex justify-between text-sm mt-2 text-gray-500"><p>33 Loads</p><p class="font-semibold positive-change">63.36%</p></div></div>
-                    <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm"><h3 class="font-bold text-lg">Piedmont Moving</h3><p class="text-2xl font-semibold mt-1">$17,200.00</p><div class="flex justify-between text-sm mt-2 text-gray-500"><p>2 Loads</p><p class="font-semibold negative-change">-82.03%</p></div></div>
-                    <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm"><h3 class="font-bold text-lg">Other Providers</h3><p class="text-2xl font-semibold mt-1">$2,633.71</p><div class="flex justify-between text-sm mt-2 text-gray-500"><p>5 Loads</p><p class="font-semibold positive-change">100%</p></div></div>
+            <div class="w-full max-w-6xl p-16">
+                <div class="grid grid-cols-3 gap-8 divide-x divide-gray-200 text-center">
+                    <div><p class="text-6xl font-bold text-indigo-600">[Value 1]</p><p class="subtle-text mt-2">[Description of Metric 1]</p></div>
+                    <div class="pl-8"><p class="text-6xl font-bold text-indigo-600">[Value 2]</p><p class="subtle-text mt-2">[Description of Metric 2]</p></div>
+                    <div class="pl-8"><p class="text-6xl font-bold text-indigo-600">[Value 3]</p><p class="subtle-text mt-2">[Description of Metric 3]</p></div>
                 </div>
             </div>
+            <div class="slide-footer subtle-text">19</div>
+        </div>
+        
+        <!-- 20. Simple Title -->
+        <div id="t20" class="slide dark-bg light-text">
+            <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-full max-w-5xl p-16">
+                <h1 class="text-7xl font-extrabold">[Simple, Bold Title]</h1>
+            </div>
+            <div class="slide-footer subtle-text-dark">20</div>
         </div>
 
-        <!-- Variation 4: Gradient Accent Dark Mode -->
-        <div id="v4" class="slide bg-gray-900 text-white">
+        <!-- 21. Tilted Title Block -->
+        <div id="t21" class="slide light-bg dark-text">
             <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
-            <div class="w-full max-w-5xl text-center">
-                <h1 class="slide-title bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">Quarter 1 FTL Freight Spend</h1>
-                <p class="slide-subtitle text-gray-400">Total Load Count: 847 <span class="positive-change">(+8.87%)</span></p>
-                <div class="bg-black/20 p-2 rounded-xl">
-                    <table class="w-full text-left">
-                        <thead>
-                            <tr>
-                                <th class="p-4 font-semibold text-gray-400">Provider</th>
-                                <th class="p-4 font-semibold text-gray-400 text-right">Spend</th>
-                                <th class="p-4 font-semibold text-gray-400 text-right">Load Count</th>
-                                <th class="p-4 font-semibold text-gray-400 text-right">Change</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-t border-gray-800"><td class="p-4 font-semibold">Haversack Truckload</td><td class="p-4 text-right">$2,205,686.86</td><td class="p-4 text-right">741</td><td class="p-4 text-right positive-change">4.04%</td></tr>
-                            <tr class="border-t border-gray-800"><td class="p-4 font-semibold">Landstar</td><td class="p-4 text-right">$152,765.00</td><td class="p-4 text-right">32</td><td class="p-4 text-right negative-change">-14.94%</td></tr>
-                            <tr class="border-t border-gray-800"><td class="p-4 font-semibold">Seko Logistics</td><td class="p-4 text-right">$97,392.64</td><td class="p-4 text-right">34</td><td class="p-4 text-right positive-change">100%</td></tr>
-                            <tr class="border-t border-gray-800"><td class="p-4 font-semibold">Tech Freight</td><td class="p-4 text-right">$65,132.74</td><td class="p-4 text-right">33</td><td class="p-4 text-right positive-change">63.36%</td></tr>
-                            <tr class="border-t border-gray-800"><td class="p-4 font-semibold">Piedmont Moving</td><td class="p-4 text-right">$17,200.00</td><td class="p-4 text-right">2</td><td class="p-4 text-right negative-change">-82.03%</td></tr>
-                        </tbody>
-                    </table>
+            <div class="w-full h-full flex items-center justify-center">
+                <div class="w-3/5 h-64 bg-gray-800 light-text p-12 rounded-lg flex items-center -rotate-3">
+                    <h2 class="text-5xl font-bold">[Section Title with Impact]</h2>
                 </div>
             </div>
+            <div class="slide-footer subtle-text">21</div>
         </div>
 
-        <!-- Variation 5: Chart & Table Combo -->
-        <div id="v5" class="slide bg-black text-white">
+        <!-- 22. Content with Background Image -->
+        <div id="t22" class="slide dark-bg light-text p-0">
+             <div class="absolute inset-0 bg-black/60 z-10"></div>
+             <div class="h-full w-full bg-cover bg-center" style="background-image: url('https://placehold.co/1200x800/374151/4b5563?text=Background');"></div>
+             <div class="absolute inset-0 p-16 flex flex-col justify-center z-20">
+                <h2 class="text-5xl font-bold">[Title Over Image]</h2>
+                <p class="mt-4 max-w-2xl">[Supporting text that provides context to the background image or overall topic.]</p>
+             </div>
+             <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+             <div class="slide-footer subtle-text-dark">22</div>
+        </div>
+
+        <!-- 23. Alternating Text and Image Blocks -->
+        <div id="t23" class="slide light-bg dark-text">
             <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
-            <div class="w-full max-w-6xl">
-                <div class="text-center mb-8">
-                    <h1 class="slide-title">Quarter 1 FTL Freight Spend by Provider</h1>
-                    <p class="slide-subtitle text-gray-400">Total Load Count: 847 <span class="positive-change">(+8.87%)</span></p>
-                </div>
-                <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
-                    <div class="lg:col-span-2">
-                        <div class="h-96 bg-gray-900 p-4 rounded-xl">
-                             <canvas id="spendChart"></canvas>
-                        </div>
-                    </div>
-                    <div class="lg:col-span-3">
-                        <table class="w-full text-left text-sm">
-                            <thead class="text-gray-400">
-                                <tr class="border-b border-gray-700">
-                                    <th class="pb-2">Provider</th>
-                                    <th class="pb-2 text-right">Spend</th>
-                                    <th class="pb-2 text-right">Loads</th>
-                                    <th class="pb-2 text-right">Change</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-gray-800">
-                                <tr class="font-medium"><td class="py-3">Haversack Truckload</td><td class="py-3 text-right">$2.21M</td><td class="py-3 text-right">741</td><td class="py-3 text-right positive-change">+4.04%</td></tr>
-                                <tr class="font-medium"><td class="py-3">Landstar</td><td class="py-3 text-right">$152.8k</td><td class="py-3 text-right">32</td><td class="py-3 text-right negative-change">-14.94%</td></tr>
-                                <tr class="font-medium"><td class="py-3">Seko Logistics</td><td class="py-3 text-right">$97.4k</td><td class="py-3 text-right">34</td><td class="py-3 text-right positive-change">+100%</td></tr>
-                                <tr class="font-medium"><td class="py-3">Tech Freight</td><td class="py-3 text-right">$65.1k</td><td class="py-3 text-right">33</td><td class="py-3 text-right positive-change">+63.36%</td></tr>
-                                <tr class="font-medium"><td class="py-3">Piedmont Moving</td><td class="py-3 text-right">$17.2k</td><td class="py-3 text-right">2</td><td class="py-3 text-right negative-change">-82.03%</td></tr>
-                                <tr class="font-medium"><td class="py-3">Others</td><td class="py-3 text-right">$2.6k</td><td class="py-3 text-right">5</td><td class="py-3 text-right positive-change">+100%</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
+            <div class="w-full max-w-5xl p-16">
+                <div class="grid grid-cols-2 gap-8 items-center">
+                    <div><h3 class="text-2xl font-bold">[Point One]</h3><p class="subtle-text mt-2">[Description]</p></div>
+                    <div class="h-48 bg-gray-100 rounded-lg"></div>
+                    <div class="h-48 bg-gray-100 rounded-lg"></div>
+                    <div><h3 class="text-2xl font-bold">[Point Two]</h3><p class="subtle-text mt-2">[Description]</p></div>
                 </div>
             </div>
+            <div class="slide-footer subtle-text">23</div>
+        </div>
+
+        <!-- 24. Circular Stats -->
+        <div id="t24" class="slide dark-bg light-text">
+            <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-full max-w-6xl p-16">
+                <h2 class="text-4xl font-bold text-center mb-12">[Key Demographics]</h2>
+                <div class="grid grid-cols-3 gap-8">
+                    <div class="text-center"><div class="w-48 h-48 rounded-full border-4 border-gray-700 mx-auto flex flex-col items-center justify-center"><p class="text-5xl font-bold">[73%]</p><p class="subtle-text-dark">[Label]</p></div></div>
+                    <div class="text-center"><div class="w-48 h-48 rounded-full border-4 border-indigo-500 mx-auto flex flex-col items-center justify-center"><p class="text-5xl font-bold">[Value]</p><p class="subtle-text-dark">[Label]</p></div></div>
+                    <div class="text-center"><div class="w-48 h-48 rounded-full border-4 border-gray-700 mx-auto flex flex-col items-center justify-center"><p class="text-5xl font-bold">[Value]</p><p class="subtle-text-dark">[Label]</p></div></div>
+                </div>
+            </div>
+            <div class="slide-footer subtle-text-dark">24</div>
+        </div>
+
+        <!-- 25. Vertical Title and Content -->
+        <div id="t25" class="slide light-bg dark-text p-0 flex-row">
+            <div class="haversack-logo p-10"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-24 h-full flex items-center justify-center border-r border-gray-200">
+                <h2 class="text-3xl font-bold -rotate-90 whitespace-nowrap">[Section]</h2>
+            </div>
+            <div class="flex-grow p-16">
+                <h3 class="text-2xl font-semibold">[Content Title]</h3>
+                <p class="subtle-text mt-4">[Main content area for text or a chart.]</p>
+            </div>
+            <div class="slide-footer subtle-text p-10">25</div>
+        </div>
+        
+        <!-- 26. Checklist Slide -->
+        <div id="t26" class="slide light-bg dark-text">
+            <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-full max-w-4xl p-16">
+                <h2 class="text-4xl font-bold mb-10">[Action Items]</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4"><div class="w-6 h-6 rounded border-2 border-green-500 bg-green-500 flex items-center justify-center text-white">✓</div><p class="text-lg">[Completed Action Item]</p></div>
+                    <div class="flex items-center gap-4"><div class="w-6 h-6 rounded border-2 border-gray-800"></div><p class="text-lg">[Open Action Item]</p></div>
+                    <div class="flex items-center gap-4"><div class="w-6 h-6 rounded border-2 border-gray-800"></div><p class="text-lg">[Another Open Action Item]</p></div>
+                </div>
+            </div>
+            <div class="slide-footer subtle-text">26</div>
+        </div>
+
+        <!-- 27. Offset Grid -->
+        <div id="t27" class="slide dark-bg light-text">
+            <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-full max-w-6xl p-16">
+                <div class="grid grid-cols-2 gap-8">
+                    <div class="bg-gray-800 p-8 rounded-lg mt-12"><h3 class="font-semibold text-lg">[Topic A]</h3><p class="subtle-text-dark text-sm mt-1">[Description]</p></div>
+                    <div class="bg-gray-800 p-8 rounded-lg mb-12"><h3 class="font-semibold text-lg">[Topic B]</h3><p class="subtle-text-dark text-sm mt-1">[Description]</p></div>
+                </div>
+            </div>
+            <div class="slide-footer subtle-text-dark">27</div>
+        </div>
+
+        <!-- 28. Large Chart with Summary -->
+        <div id="t28" class="slide light-bg dark-text">
+            <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-full max-w-6xl p-16">
+                <div class="h-96 bg-gray-100 rounded-lg mb-8 flex items-center justify-center text-gray-400">[Large Chart Area]</div>
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold">[Chart Summary Title]</h3>
+                    <p class="subtle-text max-w-3xl mx-auto mt-2">[A brief, one-to-two sentence summary of the key insight from the chart above.]</p>
+                </div>
+            </div>
+            <div class="slide-footer subtle-text">28</div>
+        </div>
+
+        <!-- 29. Content with Side Blocks -->
+        <div id="t29" class="slide light-bg dark-text p-0 flex-row">
+            <div class="haversack-logo p-10"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-2/3 h-full p-16 flex flex-col justify-center">
+                <h2 class="text-4xl font-bold">[Main Content Title]</h2>
+                <p class="subtle-text mt-4">[Main description area]</p>
+            </div>
+            <div class="w-1/3 h-full bg-gray-100 p-10 flex flex-col justify-center space-y-6">
+                <div class="p-4 bg-white rounded-lg border border-gray-200"><h4 class="font-semibold">[Stat 1]</h4><p class="text-sm subtle-text">[Detail]</p></div>
+                <div class="p-4 bg-white rounded-lg border border-gray-200"><h4 class="font-semibold">[Stat 2]</h4><p class="text-sm subtle-text">[Detail]</p></div>
+            </div>
+            <div class="slide-footer subtle-text p-10">29</div>
+        </div>
+
+        <!-- 30. Minimalist Title and Footer Text -->
+        <div id="t30" class="slide dark-bg light-text">
+            <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-full max-w-5xl p-16 flex flex-col justify-between h-full">
+                <h1 class="text-6xl font-bold">[Section Title]</h1>
+                <p class="subtle-text-dark">[Footnote or brief description]</p>
+            </div>
+            <div class="slide-footer subtle-text-dark">30</div>
+        </div>
+
+        <!-- 31. Photo with Gradient Overlay -->
+        <div id="t31" class="slide p-0">
+             <div class="absolute inset-0 z-10 opacity-80 gradient-accent"></div>
+             <div class="h-full w-full bg-cover bg-center" style="background-image: url('https://placehold.co/1200x800/6b7280/e5e7eb?text=Image');"></div>
+             <div class="absolute inset-0 p-16 flex flex-col justify-center z-20 light-text">
+                <h2 class="text-5xl font-bold">[Title Over Gradient]</h2>
+                <p class="mt-4 max-w-2xl">[Supporting text]</p>
+             </div>
+             <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+             <div class="slide-footer subtle-text-dark">31</div>
+        </div>
+
+        <!-- 32. Four Quadrant Dark -->
+        <div id="t32" class="slide dark-bg light-text">
+            <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-full max-w-6xl p-16">
+                <div class="grid grid-cols-2 gap-1">
+                    <div class="bg-gray-800 p-8 h-64"><h3 class="font-semibold">[Quadrant 1]</h3><p class="text-sm subtle-text-dark mt-2">[Content]</p></div>
+                    <div class="bg-gray-800 p-8 h-64"><h3 class="font-semibold">[Quadrant 2]</h3><p class="text-sm subtle-text-dark mt-2">[Content]</p></div>
+                    <div class="bg-gray-800 p-8 h-64"><h3 class="font-semibold">[Quadrant 3]</h3><p class="text-sm subtle-text-dark mt-2">[Content]</p></div>
+                    <div class="bg-gray-800 p-8 h-64"><h3 class="font-semibold">[Quadrant 4]</h3><p class="text-sm subtle-text-dark mt-2">[Content]</p></div>
+                </div>
+            </div>
+            <div class="slide-footer subtle-text-dark">32</div>
+        </div>
+
+        <!-- 33. Title with Two Columns Below -->
+        <div id="t33" class="slide light-bg dark-text">
+            <div class="haversack-logo"><img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo"></div>
+            <div class="w-full max-w-6xl p-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold">[Main Title]</h2>
+                    <p class="subtle-text mt-2 max-w-3xl mx-auto">[Brief summary of the two points below.]</p>
+                </div>
+                <div class="grid grid-cols-2 gap-8">
+                    <div><h3 class="font-semibold text-lg">[Column A Title]</h3><p class="subtle-text mt-2">[Content]</p></div>
+                    <div><h3 class="font-semibold text-lg">[Column B Title]</h3><p class="subtle-text mt-2">[Content]</p></div>
+                </div>
+            </div>
+            <div class="slide-footer subtle-text">33</div>
+        </div>
+
+        <!-- 34. Final Page with Logo -->
+        <div id="t34" class="slide light-bg dark-text">
+            <div class="w-full h-full flex items-center justify-center">
+                <img src="https://updatedcardscript.standard.us-east-1.oortstorages.com/HAVERSACK-LOGO-FINAL-01.avif" alt="Haversack Logo" class="w-1/4">
+            </div>
+            <div class="slide-footer subtle-text">34</div>
         </div>
 
     </div>
-
-    <script>
-        const spendData = {
-            labels: ['Haversack', 'Landstar', 'Seko', 'Tech', 'Piedmont', 'Others'],
-            spends: [2205687, 152765, 97393, 65133, 17200, 2634]
-        };
-
-        const spendCtx = document.getElementById('spendChart')?.getContext('2d');
-        if (spendCtx) {
-            new Chart(spendCtx, {
-                type: 'bar',
-                data: {
-                    labels: spendData.labels,
-                    datasets: [{
-                        label: 'Spend in USD',
-                        data: spendData.spends,
-                        backgroundColor: '#4B5563',
-                        borderColor: '#9CA3AF',
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    indexAxis: 'y',
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    let label = context.dataset.label || '';
-                                    if (label) {
-                                        label += ': ';
-                                    }
-                                    if (context.parsed.x !== null) {
-                                        label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(context.parsed.x);
-                                    }
-                                    return label;
-                                }
-                            }
-                        }
-                    },
-                    scales: {
-                        y: { ticks: { color: '#D1D5DB' }, grid: { color: 'rgba(255,255,255,0.1)' } },
-                        x: { ticks: { color: '#D1D5DB' }, grid: { display: false } }
-                    }
-                }
-            });
-        }
-    </script>
 
 </body>
 </html>
